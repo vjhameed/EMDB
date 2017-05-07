@@ -23,7 +23,6 @@ app.post("/posted",(req,res)=>{
         var plot  =  req.body.plot ? encodeURIComponent(req.body.plot) : "full";
         var url = `http://www.omdbapi.com/?s=${moviename}&plot=${plot}&type=${type}`
         request(url,(error,response,body)=>{
-       // if(response.statusCode == 200 )
             result = JSON.parse(body);
             res.render("results",{thingvar:result})
         });
