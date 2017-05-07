@@ -11,6 +11,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.set("view engine","ejs");
 app.use(express.static("public"));
 
+var port = process.env.PORT || 3000;
 app.get("/",(req,res)=>{
     res.render("search");
 });
@@ -28,4 +29,4 @@ app.post("/posted",(req,res)=>{
         });
 });
 
-app.listen(3000,()=>{console.log("server has started") })
+app.listen(port,()=>{console.log("server has started") })
