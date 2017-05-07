@@ -1,0 +1,66 @@
+<!Doctype Html>
+<html>
+
+<head>
+
+    <title>EMDB</title>
+    <link href="/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 class="jumbotron">Welcome to the EMDB</h1>
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Search For Movie</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="sentMessage" id="contactForm" method="post" action="/posted">
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="name">Movie Name</label>
+                            <input type="text" class="form-control" placeholder="Movie Name" id="name" name="mname" required data-validation-required-message="Please enter movie name.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="type">Type</label>
+                            <input type="text" class="form-control" name="type" placeholder="Movie/Series/Episodes" id="type">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label for="plot">Plot</label>
+                            <input type="text" class="form-control" placeholder="Plot" id="plot" name="plot">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <div class="row">
+                        <div class="form-group col-xs-12">
+                            <button type="submit" class="btn btn-success btn-lg">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Script src="/bootstrap.min.js" type="text/javascript"></Script>
+<Script src="/jquery-3.2.0.min.js" type="text/javascript"></Script>
+
+</body>
+
+
+</html>
